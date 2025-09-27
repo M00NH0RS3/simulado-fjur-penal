@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="image.png" type="image/png" />
+    <meta name="theme-color" content="#38bdf8" />
+    <title>Resumo – Fundamentos Jurídicos (Aulas 9-14)</title>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js")
+          .then(() => console.log("Service Worker registrado"))
+          .catch((err) => console.error("SW erro:", err));
+      }
+    </script>
+
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #0b1222f2;
+        --muted: #94a3b8;
+        --text: #e5e7eb;
+        --accent: #38bdf8;
+        --border: #334155;
+      }
+
+      body {
+        margin: 0;
+        background: radial-gradient(
+            1200px 600px at 10% -10%,
+            rgba(56, 189, 248, 0.15),
+            transparent
+          ),
+          radial-gradient(
+            1000px 600px at 120% 20%,
+            rgba(34, 197, 94, 0.12),
+            transparent
+          ),
+          var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+          "Helvetica Neue", Arial;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 24px auto;
+        padding: 0 16px;
+      }
+
+      a:link {
+        text-decoration: none;
+      }
+
+      .btn {
+        appearance: none;
+        border: 1px solid var(--border);
+        background: #0a1222;
+        color: var(--text);
+        padding: 10px 14px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.2s;
+        font-weight: 700;
+        margin-left: 8px;
+        display: inline-block;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+      }
+      .btn.primary {
+        background: linear-gradient(135deg, #38bdf8, #34d399);
+        border-color: transparent;
+        color: #001018;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      header h1 {
+        font-size: 1.5rem;
+        margin: 8px 0;
+      }
+
+      .card {
+        background: var(--card);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        padding: 18px;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        color: var(--accent);
+        margin-top: 0;
+      }
+      h3 {
+        margin-bottom: 6px;
+      }
+      p {
+        color: var(--text);
+        line-height: 1.45;
+      }
+      ul {
+        margin: 8px 0 10px 20px;
+      }
+      li {
+        margin-bottom: 6px;
+      }
+      .highlight {
+        font-weight: 700;
+        color: var(--accent);
+      }
+      .muted {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .footer {
+        margin: 24px 0 40px;
+        color: var(--muted);
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      @media (max-width: 640px) {
+        header h1 {
+          font-size: 1.25rem;
+        }
+        .container {
+          padding: 0 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>📘 Resumo – Fundamentos Jurídicos (Aulas 9–14)</h1>
+        <div>
+          <a class="btn" href="#">Voltar ao índice</a>
+          <a class="btn primary" href="#pdf">Baixar PDF</a>
+        </div>
+      </header>
+
+      <section class="card" id="nocoes-gerais">
+        <h2>1. Noções Gerais do Crime</h2>
+        <p>
+          <span class="highlight">Crime</span> é a conduta humana que reúne três
+          elementos: <strong>fato típico</strong> (conduta prevista em lei),
+          <strong> ilicitude</strong> (contrariedade ao ordenamento jurídico) e
+          <strong>culpabilidade</strong> (possibilidade de o agente agir de
+          forma diferente).
+        </p>
+        <ul>
+          <li>
+            <span class="highlight">Classificação:</span> doloso (intenção) e
+            culposo (imprudência, negligência ou imperícia).
+          </li>
+          <li>
+            <span class="highlight">Tripé essencial:</span> tipicidade —
+            ilicitude — culpabilidade.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="dever-omissao">
+        <h2>2. Dever de Agir e Omissão</h2>
+        <p>
+          O bombeiro militar possui <strong>dever legal de agir</strong> em
+          situações de emergência. A omissão pode gerar responsabilização penal,
+          administrativa e disciplinar.
+        </p>
+        <ul>
+          <li>
+            <span class="highlight">Omissão de socorro (art.135 CP):</span>
+            deixar de prestar assistência quando possível fazê-lo sem risco
+            pessoal.
+          </li>
+          <li>
+            Procedimentos práticos: <strong>registrar no CAD</strong>, comunicar
+            hierarquia, acionar recursos (SAMU, apoio), e manter contato com
+            solicitante.
+          </li>
+          <li>
+            Exemplo crítico: não registrar ou justificar a falta de viatura pode
+            levar a investigação penal em caso de resultado grave.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="excludentes">
+        <h2>3. Excludentes de Ilicitude</h2>
+        <p>
+          Atos típicos que, por condicionantes, não são considerados ilícitos:
+        </p>
+        <ul>
+          <li>
+            <span class="highlight">Estado de necessidade (art.43 CPM):</span>
+            perigo atual não provocado pelo agente; o mal causado deve ser menor
+            ao mal evitado; não se aplica quando o agente tem dever legal de
+            enfrentar o perigo.
+          </li>
+          <li>
+            <span class="highlight">Legítima defesa (art.44 CPM):</span>
+            agressão injusta atual ou iminente; meios necessários e
+            proporcionais; defesa própria ou de terceiro.
+          </li>
+          <li>
+            <span class="highlight"
+              >Estrito cumprimento do dever legal / exercício regular de
+              direito:</span
+            >
+            atuação conforme normas, ordens e competências (ex.: interdição
+            técnica de estabelecimento); o excesso (doloso ou culposo) atrai
+            responsabilidade.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="crimes-disciplina">
+        <h2>4. Crimes contra Autoridade e Disciplina Militar</h2>
+        <p>
+          Proteção da hierarquia e disciplina é ponto central no direito
+          militar:
+        </p>
+        <ul>
+          <li>
+            <span class="highlight">Motim (art.149 CPM):</span> reunião de
+            militares para desobedecer ordens ou ocupar dependências — sem arma;
+            pena aumentada se houver líderes ("cabeças").
+          </li>
+          <li>
+            <span class="highlight">Revolta:</span> motim com uso de armas —
+            pena mais severa.
+          </li>
+          <li>
+            <span class="highlight">Conspiração (art.152 CPM):</span> ajuste
+            para motim/revolta; quem denuncia antes da execução pode se
+            beneficiar de isenção de pena.
+          </li>
+          <li>
+            <span class="highlight">Recusa de obediência (art.163 CPM):</span>
+            recusar ordem de matéria de serviço — punição prevista.
+          </li>
+          <li>
+            <span class="highlight"
+              >Desrespeito / Desacato (arts.160 e 298 CPM):</span
+            >
+            ofensas à dignidade/decurso do superior têm tipificação específica e
+            penas correlatas.
+          </li>
+          <li>
+            <span class="highlight"
+              >Violência contra superior (arts.157/158 CPM):</span
+            >
+            agressões físicas são crimes com penas maiores se houver lesão, arma
+            ou morte.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="outros-crimes">
+        <h2>5. Outros Crimes Militares Relevantes</h2>
+        <ul>
+          <li>
+            <span class="highlight">Embriaguez em serviço (art.202 CPM):</span>
+            punível; prova por exame clínico e testemunhas, não obrigatoriamente
+            por exame de sangue.
+          </li>
+          <li>
+            <span class="highlight">Dormir em serviço (art.203 CPM):</span>
+            conduta tipificada com pena restritiva.
+          </li>
+          <li>
+            <span class="highlight">Deserção:</span> ausência injustificada por
+            prazo legal (ex.: mais de 8 dias), com sanções previstas.
+          </li>
+          <li>
+            <span class="highlight">Prevaricação (art.319):</span> retardar ou
+            deixar de praticar ato de ofício por interesse pessoal.
+          </li>
+          <li>
+            <span class="highlight">Falsidade ideológica (art.312 CPM):</span>
+            inserir/omitir declaração falsa em documento com potencial prejuízo
+            à administração militar.
+          </li>
+          <li>
+            <span class="highlight">Condescendência criminosa:</span>
+            indulgência indevida do superior que deixa de responsabilizar o
+            infrator.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="procedimentos">
+        <h2>6. Procedimentos Operacionais e Normas Internas</h2>
+        <p>Documentação e protocolos minimizam riscos de responsabilização:</p>
+        <ul>
+          <li>
+            Todas as chamadas ao <strong>193</strong> devem ser registradas no
+            <strong>CAD</strong>.
+          </li>
+          <li>
+            Chamadas sem recurso disponível devem ser registradas com código
+            apropriado; trotes também são registrados.
+          </li>
+          <li>
+            Manter contato com solicitante e comunicar hierarquia é essencial
+            para justificar decisões operacionais.
+          </li>
+          <li>
+            DIAO/ITO (instruções e diretrizes internas) definem triagem,
+            classificação e empenho de recursos.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="pontos-chave">
+        <h2>7. Pontos-chave para o Bombeiro Militar</h2>
+        <ul>
+          <li>
+            Atuar sempre dentro das normas (Constituição, legislação estadual,
+            DIAO/ITO).
+          </li>
+          <li>
+            Documentar todas as decisões operacionais relevantes (CAD,
+            relatórios, comunicação hierárquica).
+          </li>
+          <li>Aplicar proporcionalidade ao usar a força; evitar excessos.</li>
+          <li>
+            Entender os limites das excludentes de ilicitude (quem tem dever
+            legal não se exime facilmente).
+          </li>
+          <li>
+            Hierarquia e disciplina possuem proteção penal específica;
+            comportamentos contra esse núcleo atraem sanções graves.
+          </li>
+        </ul>
+      </section>
+
+      <div class="footer muted">
+        Resumo baseado nas Aulas 9–14 fornecidas pelo usuário — pronto para
+        revisão rápida.
+      </div>
+    </div>
+  </body>
+</html>
